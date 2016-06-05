@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oBtn=document.getElementById("btn1");
+            var oUl=document.getElementById("list");
+            var arr=['国家民委："清真食品不清真"等问题仍然突出',
+            '德国音乐节曝大型性骚扰事件 已26名女性报案',
+            '马英九15日赴香港演讲 将分享对两岸关系看法',
+            '科技大事件：微软CEO访华探讨反垄断调查问题',
+            '中石油两个月出售旗下5家公司 多数严重亏损负债'];
+            var len=arr.length;
+            var onOff=true;
+            oBtn.onclick=function(){
+                if(onOff){
+                    for(var i=0;i<len;i++){
+                        oUl.innerHTML+="<li>"+arr[i]+"</li>";
+                    }
+                    onOff=false;
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="自动生成10个li"/>
+<ul id="list"></ul>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+#content{
+    position: relative;
+    width:420px;
+    height: 420px;
+    border: 10px solid #ccc;
+    margin: 40px auto 0;
+}
+#content a{
+    width: 40px;
+    height: 40px;
+    border: 5px solid #fff;
+    background-color: black;
+    color: #ffffff;
+    position: absolute;
+    top: 175px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+#content a:hover{
+    opacity: 0.5;
+
+}
+#pre{
+    left:20px;
+}
+#next{
+    right:20px;
+}
+#text{
+    position: absolute;
+    width: 420px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    bottom: 0;
+    background-color: black;
+    color: #ffffff;
+    margin: 0;
+}
+#span1{
+    position: absolute;
+    width: 420px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    top: 20px;
+    left: 0;
+    background-color: black;
+    color: #ffffff;
+}
+#img1{
+    width: 420px;
+    height: 380px;
+}
+    </style>
+</head>
+<body>
+<div id="content">
+    <input id="btn1" type="button" value="循环切换"/>
+    <input id="btn2" type="button" value="顺序切换"/>
+    <a id="pre" href="javascript:;"><</a>
+    <a id="next" href="javascript:;">></a>
+    <span id="span1">图片的数量</span>
+    <p id="text">正在加载图片</p>
+    <img id="img1"/>
+</div>
+<script type="text/javascript">
+    window.onload=function(){
+        var pre=document.getElementById("pre");
+        var next=document.getElementById("next");
+        var text=document.getElementById("text");
+        var span1=document.getElementById("span1");
+        var img1=document.getElementById("img1");
+        var btn1=document.getElementById("btn1");
+        var btn2=document.getElementById("btn2");
+        var arrUrl=["../img/1.jpg","../img/2.jpg","../img/3.jpg","../img/4.jpg"];
+        var arrText=["美女1","帅哥1","美女2","美女3"];
+        var num=0;
+        span1.innerHTML=num+1+"/"+arrUrl.length;
+        img1.src=arrUrl[0];
+        text.innerHTML=arrText[0];
+        function change(){
+            span1.innerHTML=num+1+"/"+arrUrl.length;
+            img1.src=arrUrl[num];
+            text.innerHTML=arrText[num];
+        }
+        change();
+        btn1.onclick=function(){
+            next.onclick=function(){
+                num++;
+                if(num==arrUrl.length){
+                    num=0;
+                }
+                change();
+            }
+            pre.onclick=function(){
+                num--;
+                if(num==-1){
+                    num=arrUrl.length-1;
+                }
+                change();
+            }
+        }
+        btn2.onclick=function(){
+            next.onclick=function(){
+                num++;
+                if(num==arrUrl.length){
+                    alert("已经到最后一张图片");
+                    num=arrUrl.length-1;
+                }
+                change();
+            };
+            pre.onclick=function(){
+                num--;
+                if(num==-1){
+                    alert("已经到第一张图片");
+                    num=0;
+                }
+                change();
+            }
+        }
+
+
+    }
+</script>
+</body>
+</html>

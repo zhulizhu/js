@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input id="text1" type="text" value="">
+<select id="select1">
+    <option value="北京">北京</option>
+    <option value="杭州">杭州</option>
+    <option value="上海">上海</option>
+</select>
+<input id="btn1" type="button" value="按钮">
+<p id="p1">只是我的地盘</p>
+<script type="text/javascript">
+    window.onload=function(){
+        var btnl=document.getElementById("btn1");
+        var text1=document.getElementById("text1");
+        var select1=document.getElementById("select1");
+        var p1=document.getElementById("p1");
+        btnl.onclick=function(){
+            p1.innerHTML=text1.value;
+            text1.value="";
+        }
+
+    }
+</script>
+</body>
+</html>

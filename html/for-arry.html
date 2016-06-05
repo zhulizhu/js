@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+//        window.onload=function(){
+//            var arr=[[1,2,3],[4,5,6],[7,8,9]];
+//            for(var i=0;i<arr.length;i++){
+//                for(var j=0;j<arr[i].length;j++){
+//                    alert(arr[i][j]);
+//                }
+//            }
+//        }
+        window.onload=function(){
+            var oUl=document.getElementById("list");
+            var aUl=oUl.getElementsByTagName("ul");
+            var len=aUl.length;
+            var aLi=null;
+            for(var i=0;i<len;i++){
+                aLi=aUl[i].getElementsByTagName("li");
+                for(var j=0;j<aLi.length;j++){
+                  aLi[j].style.border="1px solid red";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>
+        <h1>我的好友</h1>
+        <ul>
+            <li>1 vvvvv</li>
+            <li>2vvvv</li>
+            <li>3vvvv</li>
+        </ul>
+    </li>
+    <li>
+        <h1>我的朋友</h1>
+        <ul>
+            <li>4vvvv</li>
+            <li>5vvvvvvv</li>
+            <li>6vvvv</li>
+        </ul>
+    </li>
+    <li>
+        <h1>我的小伙伴</h1>
+        <ul>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

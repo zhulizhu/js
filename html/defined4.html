@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #pic{
+            width: 400px;
+            height: 500px;
+            position: relative;
+            margin: 0 auto;
+            background:url("../img/loader_ico.gif") no-repeat center;
+        }
+        #pic img{
+            width: 400px;
+            height: 500px;
+        }
+        #pic ul{
+            width: 40px;
+            position: absolute;
+            top: 0;
+            right: -50px;
+        }
+        #pic li{
+            width: 40px;
+            height: 40px;
+            margin-bottom: 4px;
+            background-color: #666;
+        }
+        #pic .active{
+            background-color: red;
+        }
+        #pic span,#pic p{
+            position: absolute;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+        #pic span{
+            top: 0;
+        }
+        #pic p{
+            bottom: 0;
+            margin: 0;
+
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oDiv=document.getElementById("pic");
+            var oImg=oDiv.getElementsByTagName("img")[0];
+            var oSpan=oDiv.getElementsByTagName("span")[0];
+            var oP=oDiv.getElementsByTagName("p")[0];
+            var oUl=oDiv.getElementsByTagName("ul")[0];
+            var aLi=oUl.getElementsByTagName("li");
+            var aUrl=["../img/1.png","../img/2.png","../img/3.png","../img/4.png"];
+            var aText=["图片1","图片2","图片3","图片4"];
+            var num=0;
+            //var oldLi=null;
+            for(var i=0;i<aUrl.length;i++){
+                oUl.innerHTML+="<li></li>"
+            }
+           // oldLi=aLi[num];
+            oImg.src=aUrl[num];
+            oSpan.innerHTML=1+num+"/"+aUrl.length;
+            oP.innerHTML=aText[num];
+            aLi[num].className="active";
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onclick=function(){
+                    oImg.src=aUrl[this.index];
+                    oSpan.innerHTML=1+this.index+"/"+aUrl.length;
+                    oP.innerHTML=aText[this.index];
+                    for(var i=0;i<aLi.length;i++){
+                        aLi[i].className="";
+                    }
+                    this.className="active";
+                    //oldLi.className="";
+                   // oldLi=this;
+                    //this.className="active"
+                };
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="pic">
+    <img src="" >
+    <span>数量正遭计算中。。。</span>
+    <p>文字。。。</p>
+    <ul>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload= function () {
+            var btn1=document.getElementById("btn1");
+            var btn2=document.getElementById("btn2");
+            var btn3=document.getElementById("btn3");
+            var btn4=document.getElementById("btn4");
+            var p1=document.getElementById("p1");
+            var num=15;
+            btn1.onclick=function(){
+                num--;
+                p1.style.fontSize=num+"px";
+            };
+            btn2.onclick=function(){
+                num++;
+                p1.style.fontSize=num+"px";
+            };
+            btn3.onclick=function(){
+                p1.className="red";
+            };
+            btn4.onclick=function(){
+                p1.className="yellow";
+            }
+        }
+    </script>
+    <style>
+        .red{
+            background-color: red;
+            width: 300px;
+            padding: 10px;
+            border:10px solid #f1f1f1;
+            color: yellow;
+        }
+        .yellow{
+            background-color: yellow;
+            width: 400px;
+            padding: 20px;
+            border:10px solid #f1f1f1;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<input id="btn1" type="button" value="-"/>
+<input id="btn2" type="button" value="+"/>
+<input id="btn3" type="button" value="红"/>
+<input id="btn4" type="button" value="黄"/>
+<p id="p1">主动联络本地媒体报道的那一年，盲人贾海霞没有想到，三年后，他会因为外媒的报道而名扬世界。
+    而他和他十几年的种树搭档——失了双臂的贾文其，也被媒体这三年以来塑造的光辉形象，
+    给困住了——招来了市委书记的慰问，“感动了河北”，但作为“植树绿化”的典型，老兄弟俩如今
+    感觉进退两难，“再也不敢卖河滩上的那些树了。”</p>
+</body>
+</html>

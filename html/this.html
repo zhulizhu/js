@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oBtn=document.getElementsByTagName("input");
+            var that=null;
+            for(var i=0;i<oBtn.length;i++){
+//                oBtn[i].onclick=function(){
+//                    //this.style.backgroundColor="yellow";
+//                    that=this;
+//                    f1()
+//                }
+                oBtn[i].onclick=f1;
+            }
+            function f1(){
+                //that.style.backgroundColor="yellow";
+                this.style.backgroundColor="red";
+            }
+            f1();
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="按钮1"/>
+<input id="btn2" type="button" value="按钮2"/>
+<input id="btn3" type="button" value="按钮3"/>
+</body>
+</html>

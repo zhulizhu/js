@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload= function () {
+            var text1=document.getElementById("text1");
+            var btn1=document.getElementById("btn1");
+            btn1.onclick=function(){
+                if(text1.value=="") {
+                    alert("请输入口令");
+                }
+                else if(text1.value=="css"){
+                    alert("恭喜，加入我们");
+                }
+                else if(text1.value=="js"){
+                    alert("恭喜，加入我们");
+                }
+                else if(text1.value=="web"){
+                    alert("恭喜，加入我们");
+                }
+                else{
+                    alert("不好意思，你输入的"+text1.value+"无法通过");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+请输入口令：
+<input id="text1" type="text"/>
+<input id="btn1" type="button" value="验证"/>
+</body>
+</html>

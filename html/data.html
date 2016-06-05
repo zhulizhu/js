@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var aInput=document.getElementsByTagName("input");
+            var str="";
+            aInput[1].onclick=function(){
+                str=aInput[0].value;
+                if(isNaN(str)){
+                  alert(str+"不是数字")
+                }else{
+                    alert(str+"是数字")
+                }
+            }
+        }
+//        var json={abc:123};
+//        var a="12.34";
+//        alert(Number(json.abc))
+//        alert(parseFloat(a));
+//        if(parseInt(a)==parseFloat(a)){
+//            alert(a+"是整数")
+//        }else{
+//            alert(a+"是小数")
+//        }
+//        alert("200"-4)
+//        alert(isNaN("abc"))
+    </script>
+</head>
+<body>
+<input type="text"/>
+<input type="button" value="判断是否是数字"/>
+</body>
+</html>

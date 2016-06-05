@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #list{
+            width: 240px;border: 1px solid #333;margin: 0 auto;
+            background-color: #66ffff;
+        }
+        #list .lis{
+
+          }
+        #list ul{
+         display: none;
+        }
+        #list h2{
+            height: 30px;
+            line-height: 30px;
+            text-indent: 20px;
+            background: url("../img/ico1.gif") no-repeat 5px center #66ffff;
+            color: black;
+        }
+        #list .active{
+            background: url("../img/ico2.gif") no-repeat 5px center #ff9;
+            color: black;
+        }
+        #list li{
+            line-height: 24px;
+            border-bottom: 1px solid #333;
+            text-indent: 24px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oUl=document.getElementById("list");
+            var aH2=oUl.getElementsByTagName("h2");
+            var aUl=oUl.getElementsByTagName("ul");
+            var aLi=null;
+            var arrLi=[];
+            for(var i=0;i<aH2.length;i++){
+                aH2[i].index=i;
+                aH2[i].onclick=function(){
+                    if(this.className==""){
+                        aUl[this.index].style.display="block";
+                        this.className="active";
+                    }else{
+                        aUl[this.index].style.display="none";
+                        this.className="";
+                    }
+
+                }
+            }
+            for(var i=0;i<aUl.length;i++){
+                aLi=aUl[i].getElementsByTagName("li");
+                for(var j=0;j<aLi.length;j++){
+                    arrLi.push(aLi[j]);
+                }
+            }
+            for(var i=0;i<arrLi.length;i++){
+                arrLi[i].onclick=function(){
+                    for(var i=0;i<arrLi.length;i++){
+                        arrLi[i].style.backgroundColor="";
+                    }
+                    this.style.backgroundColor="blue";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li class="lis">
+        <h2>我的好友</h2>
+        <ul>
+            <li>张三</li>
+            <li>张三</li>
+            <li>张三</li>
+        </ul>
+    </li>
+    <li class="lis">
+        <h2>我的朋友</h2>
+        <ul>
+            <li>李四</li>
+            <li>李四</li>
+            <li>李四</li>
+        </ul>
+    </li>
+    <li class="lis">
+        <h2>我的家人</h2>
+        <ul>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
