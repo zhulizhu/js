@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .box{
+            width: 400px;
+            height: 500px;
+            position: relative;
+            margin-right: 50px;
+            float: left;
+            background:url("../img/loader_ico.gif") no-repeat center;
+        }
+        .box img{
+            width: 400px;
+            height: 500px;
+        }
+        .box ul{
+            width: 40px;
+            position: absolute;
+            top: 0;
+            right: -50px;
+        }
+        .box li{
+            width: 40px;
+            height: 40px;
+            margin-bottom: 4px;
+            background-color: #666;
+        }
+        .box .active{
+            background-color: red;
+        }
+        .box span,.box p{
+            position: absolute;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .box span{
+            top: 0;
+        }
+        .box p{
+            bottom: 0;
+            margin: 0;
+
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            f1("pic1",["../img/1.png","../img/2.png","../img/3.png","../img/4.png"],["图片1","图片2","图片3","图片4"],"onclick");
+            f1("pic2",["../img/2.png","../img/3.png","../img/4.png"],["图片2","图片3","图片4"],"onmouseover");
+        };
+        function f1(a,aUrl,aText,evt){
+            var oDiv=document.getElementById(a);
+            var oImg=oDiv.getElementsByTagName("img")[0];
+            var oSpan=oDiv.getElementsByTagName("span")[0];
+            var oP=oDiv.getElementsByTagName("p")[0];
+            var oUl=oDiv.getElementsByTagName("ul")[0];
+            var aLi=oUl.getElementsByTagName("li");
+            var num=0;
+            //var oldLi=null;
+            for(var i=0;i<aUrl.length;i++){
+                oUl.innerHTML+="<li></li>"
+            }
+            // oldLi=aLi[num];
+            oImg.src=aUrl[num];
+            oSpan.innerHTML=1+num+"/"+aUrl.length;
+            oP.innerHTML=aText[num];
+            aLi[num].className="active";
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i][evt]=function(){
+                    oImg.src=aUrl[this.index];
+                    oSpan.innerHTML=1+this.index+"/"+aUrl.length;
+                    oP.innerHTML=aText[this.index];
+                    for(var i=0;i<aLi.length;i++){
+                        aLi[i].className="";
+                    }
+                    this.className="active";
+                    //oldLi.className="";
+                    // oldLi=this;
+                    //this.className="active"
+                };
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="pic1" class="box">
+    <img src="" >
+    <span>数量正遭计算中。。。</span>
+    <p>文字。。。</p>
+    <ul>
+    </ul>
+</div>
+<div id="pic2" class="box">
+    <img src="" >
+    <span>数量正遭计算中。。。</span>
+    <p>文字。。。</p>
+    <ul>
+    </ul>
+</div>
+</body>
+</html>
