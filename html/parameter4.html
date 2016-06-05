@@ -5,9 +5,16 @@
     <title></title>
     <script type="text/javascript">
         window.onload = function () {
+            var totalPrivice = 0;
+            var totalNum = 0;
             var oUl = document.getElementById("list");
-            var aLi = document.getElementsByTagName("li");
-            f1(aLi[0]);
+            var oDiv = document.getElementById("div1");
+            var aSpan = oDiv.getElementsByTagName("span");
+            var aLi = oUl.getElementsByTagName("li");
+            for (var i = 0; i < aLi.length; i++) {
+                f1(aLi[i]);
+            }
+            ;
             function f1(fli) {
                 var aBtn = fli.getElementsByTagName("input");
                 var oStrong = fli.getElementsByTagName("strong")[0];
@@ -19,19 +26,31 @@
                     n1--;
                     if (n1 < 0) {
                         n1 = 0;
+                        return;
                     }
                     oStrong.innerHTML = n1;
                     oSpan.innerHTML = n1 * price + "元";
-
+                    aSpan[0].innerHTML = n1;
+                    /**********计算减后的个数和价格**************/
+                    totalNum = totalNum - 1;
+                    aSpan[0].innerHTML = totalNum;
+                    totalPrivice = totalPrivice - 1 * price;
+                    aSpan[2].innerHTML = totalPrivice;
                 };
                 aBtn[1].onclick = function () {
                     n1++;
                     oStrong.innerHTML = n1;
                     oSpan.innerHTML = n1 * price + "元";
-                }
+                    /**********计算加后个数和价格**************/
+                    totalNum = totalNum + 1;
+                    aSpan[0].innerHTML = totalNum;
+                    totalPrivice = totalPrivice + 1 * price;
+                    aSpan[2].innerHTML = totalPrivice;
+                };
 
             }
         }
+
     </script>
 </head>
 <body>
@@ -58,5 +77,10 @@
         小计：<span>0元</span>
     </li>
 </ul>
+<div id="div1">
+    商品共计：<span>0件</span>
+    共花费了：<span>0元</span>
+    其中最贵的商品是：<span>0元</span>
+</div>
 </body>
 </html>
