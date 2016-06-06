@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        var aIput=document.getElementsByTagName("input");
+        aIput[0].onclick=function(){
+            for(var i= 1;i<aIput.length;i++){
+                aIput[i].checked=!aIput[i].checked
+            }
+
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="反值">
+<ul>
+    <li><input type="checkbox" checked></li>
+    <li><input type="checkbox" ></li>
+    <li><input type="checkbox"></li>
+    <li><input type="checkbox"></li>
+    <li><input type="checkbox" checked></li>
+</ul>
+</body>
+</html>

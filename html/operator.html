@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+      window.onload=function(){
+          var aLi=document.getElementsByTagName("li");
+          var arr=["red","blue","yellow"];
+          var str="";
+          for(var i=0;i<aLi.length;i++){
+//              aLi[i].index=i;
+              aLi[i].style.backgroundColor=arr[i%arr.length];
+              aLi[i].onmouseover=function(){
+                  str=this.style.backgroundColor;
+                  this.style.backgroundColor="gray";
+              }
+              aLi[i].onmouseout=function(){
+                  this.style.backgroundColor=str;
+//                  this.style.backgroundColor=arr[this.index% arr.length];
+              }
+          }
+      }
+
+    </script>
+    <style>
+        li{
+            list-style: none;
+            margin-bottom: 3px;
+            height: 24px;
+        }
+    </style>
+
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+
+
+
+</ul>
+</body>
+</html>
