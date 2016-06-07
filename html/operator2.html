@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        #list2 {
+            border: 1px solid gray;
+            margin-left: 20px;
+            display: block;
+        }
+
+        li {
+            width: 20px;
+            height: 23px;
+            float: left;
+            list-style: none;
+            background:url("../img/ico3.png") no-repeat;
+        }
+
+        span {
+            float: left;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var oUl1 = document.getElementById("list1");
+            var oUl2 = document.getElementById("list2");
+            var aLi = oUl1.getElementsByTagName("li");
+            oUl1.onmouseover = function () {
+                oUl2.style.display = "none"
+            };
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    this.background="url('../img/ico1.png') no-repeat"
+
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<ul id="list1">
+    <span>总体评价：</span>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+<ul id="list2">
+    <span>小提示：点击星星就能打分</span>
+    <li><img src="../img/ico1.png"/></li>
+    <li><img src="../img/ico1.png"/></li>
+    <li><img src="../img/ico1.png"/></li>
+    <li><img src="../img/ico1.png"/></li>
+    <li><img src="../img/ico3.png"/></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+//        f1(1,2,3);
+//        function f1(){
+//            alert(arguments[arguments.length-1]);
+//        }
+//alert(sum(45,1,2,3));
+//        function sum(){
+//           var n=0;
+//            for(var i=0;i<arguments.length;i++){
+//                n+=arguments[i]
+//            }
+//            return n
+//        }
+        var a=1;
+        function f3(a){
+            arguments[0]=3;
+            alert(a);//3
+            var a=2;
+            alert(arguments[0]);//2
+        }
+        f3(a);
+        alert(a);//1
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+//        f1(20)(10);
+//        function f1(a){
+//            return function(b){
+//                alert(a+b);
+//            };
+//        }
+//f2().onload=function(){
+//    alert(1);
+//};
+//        function f2(){
+//            return window;
+//        }
+        window.onload=function(){
+            $("btn1").onclick=function(){
+                alert($("div1").innerHTML)
+            };
+            function $(id){
+                return document.getElementById(id);
+            }
+
+        }
+    </script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input id="btn1" type="button" value="btn"/>
+<div id="div1">123</div>
+</body>
+</html>
