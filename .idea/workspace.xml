@@ -25,16 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="defined4.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/defined4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2664">
-              <caret line="88" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="parameter3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/parameter3.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,8 +88,8 @@
       <file leaf-file-name="return1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/return1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.454545" vertical-offset="216" max-vertical-offset="1104">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state vertical-scroll-proportion="-5.090909" vertical-offset="360" max-vertical-offset="1104">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -115,11 +105,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="arguments.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="arguments.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/arguments.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43165466" vertical-offset="144" max-vertical-offset="912">
+            <state vertical-scroll-proportion="-7.2727275" vertical-offset="144" max-vertical-offset="912">
               <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getcomputed.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/getcomputed.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7410072" vertical-offset="356" max-vertical-offset="1128">
+              <caret line="32" column="79" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/html/return1.html" />
         <option value="$PROJECT_DIR$/html/return2.html" />
         <option value="$PROJECT_DIR$/html/arguments.html" />
+        <option value="$PROJECT_DIR$/html/getcomputed.html" />
       </list>
     </option>
   </component>
@@ -588,12 +589,12 @@
       <workItem from="1464578503464" duration="83862000" />
       <workItem from="1465092401453" duration="11960000" />
       <workItem from="1465178114661" duration="14244000" />
-      <workItem from="1465265227666" duration="6988000" />
+      <workItem from="1465265227666" duration="11667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202677000" />
+    <option name="totallyTimeSpent" value="207356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
@@ -650,13 +651,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/demo1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="5952">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/demo1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5928">
@@ -1003,10 +997,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/return1.html">
+    <entry file="file://$PROJECT_DIR$/html/arguments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.454545" vertical-offset="216" max-vertical-offset="1104">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state vertical-scroll-proportion="-7.2727275" vertical-offset="144" max-vertical-offset="912">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1019,10 +1013,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/arguments.html">
+    <entry file="file://$PROJECT_DIR$/html/return1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43165466" vertical-offset="144" max-vertical-offset="912">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state vertical-scroll-proportion="-5.090909" vertical-offset="360" max-vertical-offset="1104">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/getcomputed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7410072" vertical-offset="356" max-vertical-offset="1128">
+          <caret line="32" column="79" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="79" />
           <folding />
         </state>
       </provider>

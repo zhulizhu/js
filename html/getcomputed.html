@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+//            getId("btn1").onclick=function(){
+//                //alert(getComputedStyle(getId("div1")).width);
+//                alert(getId("div1").currentStyle.width);
+//
+//            }
+            getId("btn1").onclick=function() {
+                alert(getStyle(getId("div1"), "backgroundColor"));
+            }
+        };
+        function getId(id){
+            return document.getElementById(id)
+        }
+        function getStyle(obj,arr){
+//            if(obj.currentStyle){
+//                return obj.currentStyle[arr];
+//            }else{
+//                return getComputedStyle(obj)[arr];
+//            }
+            return obj.currentStyle?obj.currentStyle[arr]:getComputedStyle(obj)[arr];
+        }
+
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="按钮"/>
+<div id="div1"></div>
+</body>
+</html>
