@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+            var div1 = document.getElementById("div1");
+            var timer=null;
+            btn1.onclick = function () {
+   //             alert(parseInt(getStyle(div1,"left")));
+//                clearInterval(timer);
+//                timer=setInterval(function(){
+//                            var speed=parseInt(getStyle(div1,"left"))+9;
+//                            if(speed>800){
+//                                speed=800;
+//                            }
+//                            div1.style.left=speed+"px";
+//                            if(speed==800){
+//                               clearInterval(timer) ;
+//                            }
+//
+//                        },
+//                        30
+//                )
+                doMove(div1,9,800);
+            };
+            btn2.onclick = function () {
+                //             alert(parseInt(getStyle(div1,"left")));
+//                clearInterval(timer);
+//                timer=setInterval(function(){
+//                            var speed=parseInt(getStyle(div1,"left"))-9;
+//                            if(speed<10){
+//                                speed=10;
+//                            }
+//                            div1.style.left=speed+"px";
+//                            if(speed==10){
+//                                clearInterval(timer) ;
+//                            }
+//
+//                        },
+//                        30
+//                )
+                doMove(div1,-9,10);
+            };
+            doMove(obj,dir,target);
+            function doMove(obj,dir,target){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                            var speed=parseInt(getStyle(obj,"left"))+dir;
+                            if(speed<target&&dir<0){
+                                speed=target;
+                            }
+                            else if(speed>target&&dir>0){
+                                speed=target;
+                            }
+                            obj.style.left=speed+"px";
+                            if(speed==target){
+                                clearInterval(timer) ;
+                            }
+
+                        },
+                        30)
+            }
+            function getStyle(obj, arr) {
+                return obj.currentStyle ? obj.currentStyle[arr] : getComputedStyle(obj)[arr];
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn2" type="button" value="往后"/>
+<input id="btn1" type="button" value="往前"/>
+<div id="div1"></div>
+</body>
+</html>

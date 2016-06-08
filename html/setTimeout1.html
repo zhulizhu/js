@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 400px;
+            background-color: #66ffff;
+        }
+        #div2{
+            width: 220px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 220px;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var div1=document.getElementById("div1");
+            var div2=document.getElementById("div2");
+            div1.onmouseover=show;
+            div1.onmouseout=hidde;
+            div2.onmouseover=show;
+            div2.onmouseout=hidde;
+            function show(){
+                clearTimeout(timer);
+                div2.style.display="block";
+            }
+            function hidde(){
+                timer=setTimeout(
+                        function(){div2.style.display="none"},
+                        2000);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

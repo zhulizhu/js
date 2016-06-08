@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var btn1 = document.getElementById("btn1");
+            var div1 = document.getElementById("div1");
+            var timer=null;
+            btn1.onclick = function () {
+                doMove(div1,9,800,"left",function(){
+                    doMove(div1,9,500,"top")});
+            };
+            function doMove(obj,dir,target,arry,endFn){
+                dir=parseInt(getStyle(obj,arry))<target?dir:-dir;
+                clearInterval(timer);
+                timer=setInterval(function(){
+                            var speed=parseInt(getStyle(obj,arry))+dir;
+                            if(speed<target&&dir<0||speed>target&&dir>0){
+                                speed=target;
+                            }
+                            obj.style[arry]=speed+"px";
+                            if(speed==target){
+                                clearInterval(timer) ;
+                                endFn&&endFn();
+                            }
+
+                        },
+                        30)
+            }
+            function getStyle(obj, arr) {
+                return obj.currentStyle ? obj.currentStyle[arr] : getComputedStyle(obj)[arr];
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="走"/>
+<div id="div1"></div>
+</body>
+</html>

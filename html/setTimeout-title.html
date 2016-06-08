@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #ul1{
+            width: 400px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+
+        }
+        #ul1 li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: gray;
+            color: #ffffff;
+            list-style: none;
+            border-radius:2px ;
+        }
+        #ul2{
+            width: 200px;
+            height: 24px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            display: none;
+        }
+        #ul2 li{
+            float: left;
+            width: 50px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background-color: greenyellow;
+            color: #ffffff;
+            list-style: none;
+            border-radius:2px ;
+
+        }
+
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var ul1=document.getElementById("ul1");
+            var ul2=document.getElementById("ul2");
+            var a1Li=ul1.getElementsByTagName("li");
+            var a=a1Li.getElementsByTagName("a")[0];
+            for(var i=0;i<a1Li.length;i++){
+
+                a1Li[i].onmouseover=function(){
+                    this.style.backgroundColor="#cccccc";
+                    ul2.style.display="block";
+                };
+                a1Li[i].onmouseout=function(){
+                    this.style.backgroundColor="";
+                    ul2.style.display="none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="ul1">
+    <li><a src="#">首页</a></li>
+    <li><a src="#">关于我们</a></li>
+    <li><a src="#">作品</a></li>
+    <li><a src="#">博客</a></li>
+</ul>
+<ul id="ul2">
+    <li><a src="#">首页</a></li>
+    <li><a src="#">关于我们</a></li>
+    <li><a src="#">作品</a></li>
+    <li><a src="#">博客</a></li>
+</ul>
+</body>
+</html>
