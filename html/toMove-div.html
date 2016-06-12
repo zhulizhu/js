@@ -3,41 +3,43 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <style type="text/css">
-        #div1 {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            position: absolute;
-            top: 50px;
-            left: 30px;
-        }
-    </style>
     <script type="text/javascript">
-        window.onload = function () {
-            var btn1 = document.getElementById("btn1");
-            var div1 = document.getElementById("div1");
+        window.onload=function(){
+            var str="";
+            var len=20;
+            var aDiv=document.getElementsByTagName("div");
             var timer=null;
-            btn1.onclick = function () {
-                doMove(div1,9,800,"left",function(){
-                    doMove(div1,9,500,"top")});
-            };
-            function doMove(obj,dir,target,arry,endFn){
-                dir=parseInt(getStyle(obj,arry))<target?dir:-dir;
+            var num=0;
+            for(var i=0;i<len;i++){
+                str+='<div style="width: 50px;height:50px;background-color:red;position:absolute;top:0;left:'+i*60+'px;"></div>';
+            }
+            document.body.innerHTML=str;
+            document.onclick=function(){
                 clearInterval(timer);
                 timer=setInterval(function(){
+                    doMove(aDiv[num],20,600,"top");
+                    num++;
+                    if(num===len){
+                        clearInterval(timer);
+                    }
+                },100)
+            };
+            function doMove(obj,dir,target,arry,endFn){
+                var localtimer=null;
+                dir=parseInt(getStyle(obj,arry))<target?dir:-dir;
+                localtimer=setInterval(function(){
                             var speed=parseInt(getStyle(obj,arry))+dir;
                             if(speed<target&&dir<0||speed>target&&dir>0){
                                 speed=target;
                             }
                             obj.style[arry]=speed+"px";
                             if(speed==target){
-                                clearInterval(timer) ;
+                                clearInterval(localtimer) ;
                                 endFn&&endFn();
                             }
 
                         },
-                        30)
+                        100)
             }
             function getStyle(obj, arry) {
                 return obj.currentStyle ? obj.currentStyle[arry] : getComputedStyle(obj)[arry];
@@ -46,7 +48,6 @@
     </script>
 </head>
 <body>
-<input id="btn1" type="button" value="走"/>
-<div id="div1"></div>
+
 </body>
 </html>

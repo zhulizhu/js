@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{
+            width: 180px;
+            position: absolute;
+            top:200px;
+            left: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var img1=document.getElementById("img1");
+            var pos=parseInt(getStyle(img1,"left"));
+            var arr=[];//20,-20,18,-18...左右移动的距离;
+            var num=null;
+            var timer=null;
+            img1.onclick=function(){
+                //将距离放入arr中
+                for(var i=20;i>0;i-=2){
+                    arr.push(i,-i);
+                }
+                arr.push(0);
+                //定时器
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    img1.style.left=pos+arr[num]+"px";
+                    num++;
+                    if(num===arr.length){
+                        clearInterval(timer);
+                    }
+                },100)
+            };
+            //定时器封装好的
+            function doMove(obj,dir,target,arry,endFn){
+                var localtimer=null;
+                dir=parseInt(getStyle(obj,arry))<target?dir:-dir;
+                localtimer=setInterval(function(){
+                            var speed=parseInt(getStyle(obj,arry))+dir;
+                            if(speed<target&&dir<0||speed>target&&dir>0){
+                                speed=target;
+                            }
+                            obj.style[arry]=speed+"px";
+                            if(speed==target){
+                                clearInterval(localtimer) ;
+                                endFn&&endFn();
+                            }
+
+                        },
+                        100)
+            }
+            function getStyle(obj, arry) {
+                return obj.currentStyle ? obj.currentStyle[arry] : getComputedStyle(obj)[arry];
+            }
+        }
+    </script>
+</head>
+<body>
+<img id="img1" src="../img/66.jpg"/>
+</body>
+</html>
