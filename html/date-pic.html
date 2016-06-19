@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var p1=document.getElementById("p1");
+            var aImg=document.getElementsByTagName("img");
+            setInterval(fnTime,1000);
+            fnTime();
+            //body里面得到年月日时分秒
+            function fnTime(){
+                var nowTime=new Date();
+                var iH=nowTime.getHours();
+                var iMI=nowTime.getMinutes();
+                var iS=nowTime.getSeconds();
+                var str=addO(iH)+addO(iMI)+addO(iS);
+                p1.innerHTML=str;
+                aImg[4].src='../img/' +str.charAt(4)+ '.JPG';
+                aImg[5].src='../img/' +str.charAt(5)+ '.JPG';
+            }
+        };
+        //时分秒数字小于10加0，如01，02
+        function addO(n){
+            return n<10?'0'+n:''+n;
+        }
+    </script>
+</head>
+<body>
+<p id="p1" style="font-size: 20px;">
+</p>
+<img src="../img/0.JPG">
+<img src="../img/0.JPG">
+<img src="../img/0.JPG">
+<img src="../img/0.JPG">
+<img src="../img/0.JPG">
+<img src="../img/0.JPG">
+</body>
+</html>

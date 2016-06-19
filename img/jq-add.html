@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //  add():添加元素
+        //  slice():选择范围内的标签
+        //  serializeArray():数组形式
+        $(function(){
+//            $("div").add("span").css("backgroundColor","red");
+//            $("li").slice(1,4).css("backgroundColor","red");//包括起始标签
+//            console.log($("form").serialize());
+            console.log($("form").serializeArray());
+        })
+    </script>
+</head>
+<body>
+<div>div</div>
+<span>span</span>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<form>
+    <input type="text" name="a" value="1" />
+    <input type="text" name="b" value="2" />
+    <input type="text" name="c" value="3" />
+</form>
+</body>
+</html>

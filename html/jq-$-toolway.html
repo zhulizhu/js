@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+//$().css()  $().html()  $().val() :只能给jq对象用
+//$.xxx()  $.yyy()  $.zzz() :不仅能给jq对象用，也能给原生js用 ：叫做工具方法
+//$.type() 判断类型
+//$.trim() :去掉前后空格
+
+        $(function(){
+            var a="  hello   ";
+//            alert(typeof a);
+//            alert($.type(a));//可以判断更多的类型
+//            alert("("+a+")"); //有前后空格
+            alert("("+ $.trim(a)+")");//去掉前后空格
+
+
+        })
+    </script>
+</head>
+<body>
+<div id="div1">111</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload=function(){
+            setInterval(fnTime,1000);
+            //body里面得到年月日时分秒
+            function fnTime(){
+                var nowTime=new Date();
+                var iF=nowTime.getFullYear();
+                var iM=nowTime.getMonth()+1;
+                var iD=nowTime.getDate();
+                var iy=nowTime.getDay();
+                var iH=nowTime.getHours();
+                var iMI=nowTime.getMinutes();
+                var iS=nowTime.getSeconds();
+                if(iy===0)iy='星期日';
+                if(iy===1)iy='星期1';
+                if(iy===2)iy='星期2';
+                if(iy===3)iy='星期3';
+                if(iy===4)iy='星期4';
+                if(iy===5)iy='星期5';
+                if(iy===6)iy='星期6';
+                var str="";
+                str=iF+'年'+iM+'月'+iD+'日 '+iy+' '+ addO(iH)+':'+addO(iMI)+':'+addO(iS);
+                var bd=document.body;
+                bd.innerHTML=str;
+            }
+            //时分秒数字小于10加0，如01，02
+            function addO(n){
+                return n<10?'0'+n:''+n;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

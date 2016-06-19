@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //siblings()找所有的兄弟节点，带参数选择元素；
+        //nextAll()下面的所有兄弟节点
+        //prevAll()上面的所有兄弟节点
+        //nextUntil()下面的截至到参数兄弟节点，带参数（不带参数和nextAll一样）
+        //prevUntil()下面的截至到参数兄弟节点，带参数（不带参数和nextAll一样）
+        $(function(){
+//            $("span").siblings("h1").css("backgroundColor","red");
+           // $("p").nextAll().css("backgroundColor","red");
+           // $("p").prevAll().css("backgroundColor","red");
+//            $("div").nextUntil("span").css("backgroundColor","red");
+//            $("span").prevUntil("div").css("backgroundColor","red");
+            $("span").parentsUntil("html").css("backgroundColor","red");
+        })
+    </script>
+</head>
+<body>
+<div>div<span>span</span></div>
+<p>p</p>
+<h1>h1</h1>
+<span>span</span>
+</body>
+</html>

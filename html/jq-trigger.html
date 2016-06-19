@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //trigger()主动触发事件
+        $(function(){
+//            $("#div1").on("click",function(){
+//                alert(123);
+//            })
+//            $("#div1").trigger("click");
+            $("#div1").on("show",function(){ //自定义
+                alert(123);
+            });
+            $("#div1").on("show",function(){ //自定义
+                alert(456);
+            });
+            $("#div1").trigger("show");
+        })
+    </script>
+</head>
+<body>
+<div id="div1">111</div>
+
+</body>
+</html>

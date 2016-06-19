@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        document.createElement("header");
+        document.createElement("article");
+        document.createElement("aside");
+        document.createElement("section");
+        document.createElement("footer");
+    </script>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            height: 100px;
+            background-color: red;
+            display: block;
+        }
+        article{
+            padding: 10px;
+            background-color: yellow;
+            position: relative;
+            display: block;
+        }
+        aside{
+            height: 300px;
+            width: 200px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background-color: #66ffff;
+            display: block;
+        }
+        section{
+            height: 300px;
+            margin-left: 210px;
+            background-color: #f1f1f1;
+            display: block;
+        }
+        footer{
+            height: 200px;
+            background-color: blueviolet;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<!--<header>-->
+    <!--页面头部-->
+<!--</header>-->
+<!--<article>-->
+    <!--<aside>侧栏</aside>-->
+    <!--<section>内容</section>-->
+<!--</article>-->
+<!--<footer>页面底部</footer>-->
+<form action="http://www.baidu.com">
+    <input type="text" required="" pattern="\d{1,5}" placeholder="请输入4-16个字符" name="user" autocomplete="off">
+    <input type="password" placeholder="请输入4-16个字符" name="password" autocomplete="off" autofocus>
+    <input type="submit" value="提交">
+    <input type="submit" value="保存至草稿箱" formaction="http://www.163.com">
+</form>
+</body>
+</html>

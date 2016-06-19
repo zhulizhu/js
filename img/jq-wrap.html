@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //wrap()：包装
+        //wrapAll()：整体包装
+        //wrapInner()：内部包装
+        //unwrap()：删除包装（删除父级：除了body）
+        $(function(){
+//   $("span").wrap("<div>");   //给每一个span都包装一个div标签
+//            $("span").wrapAll("<div>"); //整体包装
+//            $("span").wrapInner("<div>");//包装标签内的内容
+            $("span").unwrap();
+        })
+    </script>
+</head>
+<body>
+<span>span</span>
+<span>span</span>
+<span>span</span>
+</body>
+</html>

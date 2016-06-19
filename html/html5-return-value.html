@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <input type="text" required="" id="text" maxlength="5"/>
+    <input type="submit" value="提交">
+</form>
+<script>
+    var text=document.getElementById("text");
+    text.value="123456789";
+    text.addEventListener("invalid",fn,false);
+    function fn(){
+        alert(this.validity.tooLong);
+        ev.preventDefault();
+    }
+</script>
+</body>
+</html>

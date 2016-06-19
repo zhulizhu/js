@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+           // display: none;
+        }
+    </style>
+    <script>
+        $(function(){
+//            alert($("div").get(0).offsetWidth)//offsetWidth获取不到隐藏的属性值
+//            alert($("div").outerWidth());   //outerWidth()可以获取隐藏的值
+//            alert($("div").html()) ; //获取第一个div,包括标签
+           // alert($("div").text());//获取全部内容，不包括标签
+            $("#div1").text("<h1>h1</h1><h1>h1</h1>");//会把标签当作文本
+
+        })
+    </script>
+</head>
+<body>
+<div id="div1">div<span>span</span></div>
+<div>div1</div>
+<div>div2</div>
+</body>
+</html>

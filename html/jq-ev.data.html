@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //trigger()主动触发事件
+        $(function(){
+          $("#div1").on("click",{name:"hello"},function(ev){
+//               alert(ev.data.name); //事件内容
+//              alert(ev.target); //事件源 div
+              alert(ev.type); //事件类型click
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div id="div1">111</div>
+
+</body>
+</html>

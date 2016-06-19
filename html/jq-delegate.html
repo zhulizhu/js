@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //delegate()委托事件
+        $(function(){
+//            $("li").on("click",function(){
+//                this.style.backgroundColor="red";
+//            })
+            $("ul").delegate("li","click",function(){ // 实际上点击事件是加在ul身上的，将效果委托到ul身上
+                this.style.backgroundColor="red";
+                $("ul").undelegate();   // 阻止事件委托
+            })
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>111</li>
+    <li>111</li>
+    <li>111</li>
+    <li>111</li>
+    <li>111</li>
+</ul>
+
+</body>
+</html>

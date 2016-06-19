@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        $(function(){
+//            $("div").on("click mouseover", function () {
+//               alert(123) ;
+//            })
+//            $("div").on({
+//                "click":function() {
+//             alert(123)},
+//                     "mouseover":function() {
+//                        alert(456) }
+//            })
+            $("div").on("click mouseover", function () {
+               alert(123) ;$("div").off();
+           })
+        })
+    </script>
+</head>
+<body>
+<div>div</div>
+<span>span</span>
+</body>
+</html>

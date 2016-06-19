@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        $(function(){
+//            alert($("div").get(0).innerHTML);
+//            for(var i=0;i<$("li").get().length;i++){   //get()表示数组
+//                $("li").get(i).style.backgroundColor="red";
+//            }
+//            for(var i=0;i<$("li").length;i++){
+//                $("li").get(i).style.backgroundColor="red";//length在jq也有，所以也可以这样写（常用方法）
+//           }
+            for(var i=0;i<$("li").length;i++){
+                $("li")[i].style.backgroundColor="red";//另外一种表示方法（不建议使用）
+            }
+        })
+    </script>
+</head>
+<body>
+<div>div</div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

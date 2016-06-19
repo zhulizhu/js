@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #div2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+//animate():第一个参数 运动的属性和值
+            //第二个参数 运动的时间
+            //第三个参数 运动的形式 两种（默认 ：swing(慢快慢)，linear(匀速)）
+            //第四个参数 回调函数
+//delay():延迟执行
+        $(function(){
+            $("#div1").click(function(){
+//                $(this).animate({"width":"300","height":"300"},4000,"linear");
+//                $("#div2").animate({"width":"300","height":"300"},4000,"swing",function(){
+//                    alert(123)
+//                });
+//                $(this).animate({"width":"300"},1000,"linear",function(){   // 利用回调函数分步进行
+//                    $(this).animate({"height":"300"})
+//                });
+                $(this).animate({"width":"300"},1000,"linear").delay(1000).animate({"height":"300"},1000,"linear"); //利用链式操作进行
+            });
+            $("#div2").click(function(){
+//                $("#div1").stop(); //默认：只会阻止当前运动
+//                $("#div1").stop(true); //阻止后续的运动
+//                $("#div1").stop(true,true); //可以立即停止到指定的目标点
+                $("#div1").finish(); //可以立即停止到所有指定的目标点
+
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="div1">div</div>
+<div id="div2">div</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+</head>
+<body>
+<div id="div1" class="div1" title="123">div<span class="div1">hahah</span></div>
+<div>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h2 id="h">h2</h2>
+    <h2>h2</h2>
+</div>
+<span class="div2">hahah</span>
+<ul>
+    <li>111</li>
+    <li title="hello"></li>
+    <li></li>
+    <li class="box"></li>
+    <li title="hello"></li>
+</ul>
+<script>
+ //   $("li:odd").css("backgroundColor","red");
+//    $("li").filter("[title=hello]").css("backgroundColor","red");
+    $(function(){
+//        $("#div1").click(function(){
+//            alert($(this).html())
+//        });
+//        $("ul").children().css("backgroundColor","red")
+//        $("#div1").html("hello").css("backgroundColor","red").click(function(){
+//            alert(123);
+//        })
+//        $("li").html("haha");
+//        $("#div1").attr("title","455")
+//        $("div").has("span").css("backgroundColor","red");
+        //$("h2").eq(1).css("backgroundColor","red");
+        alert($("#h").index());
+    })
+</script>
+</body>
+</html>

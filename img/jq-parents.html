@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.0.0.js"></script>
+    <script>
+        //parents是针对所有的祖先级
+        //closest();获取最近的指定元素的父级，（包括自己本身），必须带参数,只能找一个参数；
+        $(function(){
+      // $("span").parents("body").css("backgroundColor","red");
+            $("span").closest(".box").css("backgroundColor","red");//获取最近的指定元素的父级
+        })
+    </script>
+</head>
+<body class="box">
+<div class="box">div<span class="box">span</span></div>
+</body>
+</html>
